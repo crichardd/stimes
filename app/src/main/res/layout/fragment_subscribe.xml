@@ -22,7 +22,7 @@
             android:layout_below="@+id/logoImageView"
             android:layout_marginTop="40dp"
             android:layout_centerHorizontal="true"
-            android:text="Connexion"
+            android:text="Inscription"
             android:textSize="24sp" />
     </RelativeLayout>
 
