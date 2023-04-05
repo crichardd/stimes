@@ -3,28 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6A4C93">
-    <RelativeLayout
+    >
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp">
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/">
 
         <ImageView
             android:id="@+id/logoImageView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="130dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/logo" />
+            android:src="@drawable/img" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/logoImageView"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
-            android:text="Connexion"
+            android:text="Stime"
+            android:layout_marginRight="80dp"
             android:textSize="24sp" />
-    </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logoImageView"
+            android:layout_centerHorizontal="true"
+            android:text="100 Points"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="300dp"
@@ -41,24 +53,6 @@
             android:inputType="text"
             android:background="@drawable/text_pseudo"/>
 
-        <EditText
-            android:id="@+id/passwordEditText"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="25dp"
-            android:hint="Mot de passe"
-            android:inputType="textPassword"
-            android:background="@drawable/text_password" />
-
-        <Button
-            android:id="@+id/loginButton"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="200dp"
-            android:text="Valider"
-            android:background="@drawable/validate_button"
-            android:textColor="#000000"
-            android:textSize="18sp" />
     </LinearLayout>
 
 </FrameLayout>
