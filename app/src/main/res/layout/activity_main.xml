@@ -1,18 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/dark_green"
+    >
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/container"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+    <!-- Header LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/purple"
+        android:layout_gravity="top">
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="130dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/img" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logoImageView"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="Stime"
+            android:layout_marginRight="80dp"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logoImageView"
+            android:layout_centerHorizontal="true"
+            android:text="100 Points"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Main LinearLayout -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/app_nav" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <!-- Footer LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#DCDCDC"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="130dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/message"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="130dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/message" />
+
+        <ImageView
+            android:id="@+id/people"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="130dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/people" />
+
+    </LinearLayout>
+
+</FrameLayout>
